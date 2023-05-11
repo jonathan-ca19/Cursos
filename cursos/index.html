@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    
+  </header>
+  <main>
+<div class="container">
+  <!-- ESTUDIANTE -->
+    <div class="card">
+        <div class="card-header">
+            ESTUDIANTE
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+              <label for="nameStudent" class="form-label">Nombre</label>
+              <input type="text" name="nameStudent" id="nameStudent" class="form-control" placeholder="Alex" aria-describedby="helpId">
+            </div>
+            <div class="mb-3">
+                <label for="identificationStudent" class="form-label">identificacion</label>
+                <input type="text" name="identificationStudent" id="identificationStudent" class="form-control" placeholder="1234567890" aria-describedby="helpId">
+              </div>
+              <div class="mb-3">
+                <label for="addresStudent" class="form-label">Direccion</label>
+                <input type="text" name="addresStudent" id="addresStudent" class="form-control" placeholder="susana letor -123" aria-describedby="helpId">
+              </div>
+              <div class="mb-3">
+                <label for="registrationCodeStudent" class="form-label">Numero Matricula</label>
+                <input type="text" name="" id="registrationCodeStudent" class="form-control" placeholder="3123-apsdl" aria-describedby="helpId">
+              </div>
+              <div class="mb-3">
+                <label for="levelStudent" class="form-label">Nivel</label>
+                <input type="text" name="" id="levelStudent" class="form-control" placeholder="segundo" aria-describedby="helpId">
+              </div>
+        </div>
+        <button class="btn btn-primary" onclick="addStudent()">agregar</button>
+    </div>
+<hr>
+    <!-- Profesores -->
+    <div class="card">
+        <div class="card-header">
+            PROFESOR
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+              <label for="nameTeacher" class="form-label">Nombre</label>
+              <input type="text" name="nameTeacher" id="nameTeacher" class="form-control" placeholder="Alex" aria-describedby="helpId">
+            </div>
+            <div class="mb-3">
+                <label for="identificationTeacher" class="form-label">identificacion</label>
+                <input type="text" name="identificationTeacher" id="identificationTeacher" class="form-control" placeholder="1234567890" aria-describedby="helpId">
+              </div>
+              <div class="mb-3">
+                <label for="addresTeacher" class="form-label">Direccion</label>
+                <input type="text" name="" id="addresTeacher" class="form-control" placeholder="susana letor -123" aria-describedby="helpId">
+              </div>
+              <div class="mb-3"></div>
+              <label for="carrerTeacher">Carrera</label>
+              <select name="carrerTeacher" id="carrerTeacher">
+                <option value="turismo">Turismo</option>
+                <option value="marketing">Marketing</option>
+                <option value="desarrollo">Desarrollo de Software</option>
+              </select>
+              </div>
+              <div class="mb-3">
+                <label for="titleTeacher" class="form-label">Titulo</label>
+                <input type="text" name="" id="titleTeacher" class="form-control" placeholder="Arquitecto" aria-describedby="helpId">
+              </div>
+              <div class="mb-3">
+                <label for="asignatureTeacher" class="form-label">Asignatura</label>
+                <select name="asignatureTeacher" id="asignatureTeacher">
+                  <option value="interfaces">interfaces</option>
+                  <option value="programacion">programacion</option>
+                  <option value="metodologias">metodologia</option>
+                </select>
+              </div>
+              <button class="btn btn-primary" onclick="addTeacher()">agregar</button>
+        </div>
+          
+    </div>
+    <!-- cursos -->
+    <div class="card">
+      <div class="card-header">
+          CURSO
+      </div>
+      <div class="card-body">
+          <div class="mb-3">
+            <label for="areaCourse" class="form-label">Area</label>
+            <select name="" id="areaCourse">
+              <option value="programacion">Programacion</option>
+              <option value="diseño">Diseño</option>
+              <option value="redes">Redes</option>
+            </select>
+          </div>
+          <div class="mb-3">
+              <label for="nameCourse" class="form-label">nombre</label>
+              <input type="text" name="" id="nameCourse" class="form-control" placeholder="1234567890" aria-describedby="helpId">
+            </div>
+            <button class="btn btn-primary" onclick="addCourse()">agreg</button>
+      </div>
+    
+  </div>
+
+  <!-- actividades -->
+  <div class="card">
+    <div class="card-header">
+        ACTIVIDAD
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label for="nameActivity" class="form-label">Curso:</label>
+            <input type="text" name="" id="nameActivity" class="form-control" placeholder="1234567890" aria-describedby="helpId">
+          </div>
+          <button class="btn btn-primary" onclick="addActivity()">agreg</button>
+    </div>
+  
+</div>
+  <!-- CALIFICACIONES -->
+<div class="card">
+  <div class="card-header">
+      LIBRO DE CALIFICACIONES
+  </div>
+  <div class="card-body">
+      <div class="mb-3">
+          <label for="coursesGradesBook" class="form-label">Curso:</label>
+          <select name="" id="coursesGradesBook"></select>
+        </div>
+        <div class="mb-3">
+          <label for="activityGradesBook" class="form-label">Actividad:</label>
+          <select name="" id="activityGradesBook"></select>
+        </div>
+        <div class="mb-3">
+          <label for="weightGradesBook" class="form-label">Peso:</label>
+          <input type="number" name="" id="weightGradesBook" class="form-control" placeholder="25%" aria-describedby="helpId">
+        </div>
+        <div class="mb-3">
+          <label for="noteMaxGradesBook" class="form-label">Nota Máxima:</label>
+          <input type="number" name="" id="noteMaxGradesBook" class="form-control" placeholder="/100" aria-describedby="helpId">
+        </div>
+        <button class="btn btn-primary" onclick="addGradesBook()">agreg</button>
+  </div>
+
+</div>
+</div>
+
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script>let exports = {};</script>
+  <script src="dist/main.js"></script>
+</body>
+
+</html
